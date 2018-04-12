@@ -3,7 +3,7 @@
 
 	"name": "LMS Hack",
 	"description": "No LMS will stand against us!",
-	"version": "0.1",
+	"version": "1.1",
 	"background": {
 		"scripts": ["background.js"]
 	},
@@ -16,6 +16,14 @@
 		"https://*/*",
 		"activeTab",
 		"webRequest",
-		"webRequestBlocking"
+		"webRequestBlocking",
+		"webNavigation",
+		"tabs"
+	],
+	"content_scripts": [{
+			"matches": ["*://*.cambridgelms.org/*"],
+			"js": ["clicker.js"],
+			"run_at": "document_idle"
+		}
 	]
 }

@@ -1,4 +1,3 @@
-
 	chrome.webRequest.onBeforeRequest.addListener(function (r) {
 		if (r.url.indexOf("controllers.js")!=-1) {
 			var request = new XMLHttpRequest();
@@ -14,4 +13,4 @@
 			return { redirectUrl: "data:text/javascript,"  + encodeURIComponent(text) };
 		}
 	},{urls: ["*://*.cambridgelms.org/*"]},["blocking"]);
-	chrome.extension.getBackgroundPage().console.log('ROFLEKSEY IS HERE');
+	//POSHEL EST' SUP
