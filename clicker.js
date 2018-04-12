@@ -9,7 +9,7 @@ var roflanClick = function(e) {
 	dispatchMouseEvent(e, 'click', true, true);
 	dispatchMouseEvent(e, 'mouseup', true, true);
 }
-setInterval(function(){
+var pudge = setInterval(function(){
 	try{
 		var el = document.querySelector('#content-iframe').contentWindow.document
 		.querySelector('#ScormContent').contentWindow.document
@@ -17,7 +17,10 @@ setInterval(function(){
 		if(el) {
 			window.roflanClick(el);
 			el = document.querySelector('body > div.container.content-play > div.scorm-navigation.clearfix > div.right-arrow-container.f-right > a');
-			if(el) window.roflanClick(el);
+			setTimeout(function(){
+				window.roflanClick(el);
+			},1000);
+			clearInterval(pudge);
 		}
 	} catch(e){}
 }, 1000);

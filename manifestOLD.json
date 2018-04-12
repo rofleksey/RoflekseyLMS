@@ -19,5 +19,11 @@
 		"webRequestBlocking",
 		"webNavigation",
 		"tabs"
+	],
+	"content_scripts": [{
+			"matches": ["*://*.cambridgelms.org/*"],
+			"js": ["clicker.js"],
+			"run_at": "document_idle"
+		}
 	]
 }
