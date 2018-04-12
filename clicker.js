@@ -16,10 +16,6 @@ var pudge = setInterval(function(){
 		.querySelector('#sec > footer > div.div2 > nav > div.right-button-bar > div:nth-child(1) > button');
 		if(el) {
 			window.roflanClick(el);
-			el = document.querySelector('body > div.container.content-play > div.scorm-navigation.clearfix > div.right-arrow-container.f-right > a');
-			setTimeout(function(){
-				window.roflanClick(el);
-			},1000);
 			clearInterval(pudge);
 		}
 	} catch(e){}
